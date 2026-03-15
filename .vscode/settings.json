@@ -14,5 +14,6 @@
   "prettier.arrowParens": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "coderabbit.selfHostedUrl": "https://your-config-location/.coderabbit.yaml"
 }

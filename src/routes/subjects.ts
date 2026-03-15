@@ -11,8 +11,8 @@ router.get("/", async (req, res) => {
   try {
     const { search, department, page = 1, limit = 10 } = req.query;
 
-    const currentPage = max(1, +page); 
-
+    const currentPage = Math.max(1, +page); 
+    
     const limitPerPage = Math.max(1, +limit);
     const offset = (currentPage - 1) * limitPerPage;
 
@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
         or(
           ilike(subjects.name, `%${search}%`),
           ilike(subjects.code, `%${search}%`)
-        )
+        ) 
       );
     }
 
